@@ -74,7 +74,7 @@ function ProductsLoad() {
         if (!modal.current.contains(window.current)) {
             window.current.style.pointerEvents = "none";
             modal.current.style.pointerEvents = "auto";
-            document.documentElement.style.backgroundColor = 'rgba(0, 0, 0, .5)';
+            document.documentElement.style.backgroundColor = 'rgba(0, 0, 0, .22)';
         }
     }
 

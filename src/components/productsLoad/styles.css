@@ -1,0 +1,487 @@
+html {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    background-color: #ffffff;
+}
+
+.container {
+    height: 100vh;
+    width: 69vw;
+    display: flex;
+}
+
+.left {
+    width: 36%;
+    height: 100%;
+}
+
+.sortOrder {
+    display: grid;
+    margin-top: 20px;
+}
+
+.sortOrder>button {
+    height: auto;
+    margin: 7px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 14px;
+    font-optical-sizing: auto;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.right {
+    width: 100%;
+}
+
+.productContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "imageDiv productCardInfo  productCardControls"
+        "imageDiv productCardInfo  productCardControls";
+    grid-template-rows: 200px;
+    margin: 0;
+}
+
+.imageDiv {
+    width: 200px;
+    height: 150px;
+    /* padding-top: 10px; */
+    margin: 10px 20px 40px 20px;
+    grid-area: imageDiv;
+}
+
+img {
+    height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.product-card__info {
+    height: 100%;
+    display: grid;
+    padding-top: 30px;
+    box-sizing: border-box;
+    grid-area: productCardInfo;
+}
+
+.welcome-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 100vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-container h1 {
+    color: #333;
+
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card_logo {
+    height: 40px;
+    width: 75px;
+}
+
+.productFont {
+    font-family: "Noto Sans Gurmukhi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.product-card__title {
+    font-weight: 600;
+}
+
+.product-card__condition>p {
+    color: #0078b5;
+}
+
+.product-card__controls {
+    /* padding-top: 30px; */
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    height: 100%;
+    grid-area: productCardControls;
+}
+
+.product-card_buttons>button {
+    height: 40px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    font-optical-sizing: auto;
+    letter-spacing: 2px;
+}
+
+.product-card_buttons {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 8px;
+    padding: 10px;
+    align-self: end;
+}
+
+
+
+
+
+.product-card_discount {
+    font-size: 12px;
+}
+
+.discount {
+    font-weight: 700;
+    color: #de182c;
+}
+
+.percentage {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.product-card_price {
+    display: flex;
+    font-weight: 700;
+    font-size: 26px;
+    flex-direction: column;
+}
+
+.finalPrice {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    color: rgb(117, 117, 117);
+}
+
+.price {
+    text-decoration: line-through;
+    color: #757575;
+    font-weight: 600;
+}
+
+.product-card_priceWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.modal {
+
+    /* width:52vw; */
+    max-width: 783px;
+    min-width: 780px;
+    height: 61vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.modalClose {
+    font-size: 20px;
+    font-stretch: 100%;
+    height: 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.modal_delivery>h3 {
+    font-size: 23;
+    font-weight: 800;
+    color: #4a4c52;
+}
+
+.box {
+    height: 100%;
+    padding: 0 20px;
+}
+
+.modal_delivery {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modControls {
+    grid-area: modControls;
+    grid-template-rows: 1fr;
+}
+
+.modal_product {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "imageDiv modalCardWrap  "
+        " imageDiv modalCardWrap   ";
+}
+
+.modalPrice {
+    display: flex;
+    flex-direction: row;
+}
+
+.ModalCardWrap {
+    width: 100%;
+    justify-content: space-between;
+    grid-area: modalCardWrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "productCardInfo  productCardInfo modControls "
+        "productCardInfo  productCardInfo modControls";
+}
+
+.modProduct-card_discount {
+    flex-direction: column;
+    display: flex;
+}
+
+.modPickup {
+    display: flex;
+    height: 16vh;
+    align-items: center;
+    grid-area: modPickup;
+}
+
+.modHome,
+.modStorePickup {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 9vh;
+    border: 1.8px solid rgb(180, 180, 180);
+    border-radius: 7px;
+}
+
+.modHome>* {
+    padding-left: 10px;
+}
+
+.modStorePickup>* {
+    padding-left: 10px;
+}
+
+.modHome {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0px;
+    padding-left: 10px;
+    border-right: 0.8px dashed rgb(36, 3, 3);
+}
+
+.modStorePickup {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    padding-left: 10px;
+}
+
+.modIcon1 {
+    font-size: 30px;
+}
+
+.modIcon2 {
+    font-size: 30px;
+}
+
+.modButtons {
+    padding: 10px;
+    padding-top: 0;
+    height: 9vh;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    display: grid;
+    gap: 30px;
+    grid-area: modButtons;
+}
+
+.modButtons>button {
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.loadDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.loadDiv>button {
+    height: auto;
+    margin: 7px;
+    border-radius: 4px;
+    background-color: rgb(45, 41, 72);
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 14px;
+    font-optical-sizing: auto;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 780px) {
+    .productContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            " . imageDiv imageDiv  ."
+            "productCardInfo productCardInfo productCardInfo productCardInfo"
+            " productCardControls  productCardControls productCardControls productCardControls";
+    }
+
+    .modal {
+        /* width:98vw; */
+        /* height: 100%; */
+        height: 100vh;
+        min-width: auto;
+        font-size: 12px;
+    }
+
+    .modal_product {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+        grid-template-areas:
+            "imageDiv"
+            " modalCardWrap    ";
+    }
+
+    .imageDiv {
+        height: 200px;
+        width: 300px;
+    }
+
+    .modalPrice {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+
+    }
+
+    .modProduct-card_discount>span {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .finalPrice {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .ModalCardWrap {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px;
+
+        grid-template-areas:
+            "productCardInfo"
+            "modControls";
+    }
+
+    .imageDiv {
+        justify-self: center;
+        margin: 0;
+        margin-top: 10px;
+
+    }
+
+    .modPickup {
+        display: grid;
+
+    }
+
+    .modButtons {
+        display: grid;
+        height: auto;
+        gap:10px;
+        
+    }
+
+    .modPickup {
+        display: flex;
+    }
+
+    .left {
+        width: 0.1px;
+    }
+
+    .sortOrder>button {
+        display: none;
+    }
+  
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .product-card_buttons {
+        grid-template-rows: 2fr 2fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .imageDiv {
+        width: 130px;
+    }
+
+    .modButtons>button {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+   
+
+    .modButtons {
+        margin-top: 20px;
+    }
+
+    .modPickup {
+        display: grid;
+    }
+
+    .modPickup>* {
+        border: 0;
+    }
+
+}

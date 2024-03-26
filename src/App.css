@@ -1,0 +1,6 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Optional: Include this line if you want to use the border-box model */
+    position: relative;
+  }
